@@ -1,0 +1,68 @@
+<div class='body'>
+
+  <div class="container">
+    <h1>My note taking and sharing app.</h1>
+  </div>
+
+  <div class="container" id="login">
+    <form action="/login" method="post">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Username / Email</label>
+        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-success ">Login</button>
+      </div>
+    </form>
+    <div class="media">
+       <a href="/auth/facebook" class="fb btn socialbutton"><i class="fab fa-facebook-f"></i> Login with Facebook</a>
+    </div>
+    <div class="media">
+      <a href="/auth/google" class="google btn socialbutton"><i class="fab fa-google"></i> Login with Google+</a>
+    </div>
+    <div class="line"></div>
+    <div class="d-grid gap-2 col-6 mx-auto justify-content-center">
+      <p class="fs-6">Don't have an account?</p>
+       <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up</button>
+    </div>
+  </div>
+</div>
+
+{{!-- pop-up form --}}
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <form action="/signup" method="post">
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Username</label>
+                                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" required>
+                              </div>
+                                <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirm_password" required>
+                              </div>
+                              <div class="d-grid gap-2">
+                              <button type="submit" class="btn btn-success ">Create account</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
