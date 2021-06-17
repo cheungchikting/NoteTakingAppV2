@@ -7,6 +7,7 @@ const LocalStrategy = require('passport-local').Strategy;
 passport.use('local-signup', new LocalStrategy(
     {passReqToCallback: true},
     async (req, username, password, done) => {
+        console.log(req)
         try {
             let email = req.body.email
             let user = await knex.select("*").from("users").where("name", username).orWhere("email", email)
